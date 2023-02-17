@@ -1,0 +1,4 @@
+LMB = Cannon;
+RMB = Lazer;
+W/UpArrow=Forward;
+AD/LeftRightArrow=Rotate;
