@@ -8,6 +8,11 @@ namespace Asteroids.Objects
 {
     public class Player : ISpaceObject
     {
+        private const int _lazerMaxAmmo = 10;
+        private const float _lazerCooldownTime = 4;
+        private const float MaxSpeed = 30;
+        private const float Drag = 1.5f;
+        private const float SteerAngle = 220;
 
         public int _lazerAmmo { get; set; } = 10;
         public float _lazerCooldown { get; set; }
@@ -26,11 +31,7 @@ namespace Asteroids.Objects
         public WrapObject _boundariesW { get; }
         public GameObject _object { get; }
 
-        private int _lazerMaxAmmo { get; } = 10;
-        private float _lazerCooldownTime { get; } = 4;
-        private float MaxSpeed { get; } = 30;
-        private float Drag { get; } = 1.5f;
-        private float SteerAngle { get; } = 220;
+
         private GameObject[] _bulletPrefab { get; }
 
         public Player(GameObject prefab, GameObject[] bulletPrefab)

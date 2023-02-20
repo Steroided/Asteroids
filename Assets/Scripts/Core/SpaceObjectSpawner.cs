@@ -8,14 +8,15 @@ namespace Asteroids.Core
 {
     public class SpaceObjectSpawner
     {
+        private const float _minSize = 0.35f;
+        private const float _maxSize = 1.65f;
+        private const int _maxAsteroids = 50;
+
         public float _timeNow { get; private set; }
         public AsteroidOrUfo _asteroidOrUfo { get; private set; }
         public static List<AsteroidOrUfo> asteroidList { get; private set; } = new List<AsteroidOrUfo>();
 
-        private float _minSize { get; } = 0.35f;
-        private float _maxSize { get; } = 1.65f;
-        private int _maxAsteroids { get; } = 50;
-        private float _spawnRate { get; }
+        private float  _spawnRate { get; }
         private float _spawnDistance { get; } = 12f;
         [Range(0f, 45f)]
         private float _trajectoryVariance = 15f;

@@ -10,7 +10,8 @@ namespace Asteroids.Core
 {
     public class GamePlayManager
     {
-        
+        private const float respawnDelay = 3f;
+
         public static bool _newGameKey { get; set; }
         public Player _player { get; }
         public static class InterFaceValues
@@ -28,7 +29,6 @@ namespace Asteroids.Core
         private int _lives { get; set; }
         private int _scoreText { get; set; }
         private float _respawnTimeNow { get; set; }
-        private float respawnDelay { get; } = 3f;
         private ParticleSystem _explosionEffect { get; }
         private GameObject _gameOverUI { get; }
         private Text[] _UITexts { get; }

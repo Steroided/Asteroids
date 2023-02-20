@@ -16,7 +16,7 @@ namespace Asteroids.Objects
         public Transform _transform { get; }
         public ColliderOverlap _overLap { get; }
 
-        private float _minSize { get; } = 0.35f;
+        private float _minSize { get;}
         private bool _insideBoundaries { get; set; }
         private bool _fragment { get; set; }
         private bool _UFO { get; }
